@@ -1,5 +1,13 @@
 import { getPosts } from "@/lib/api";
 import { PostCard } from "@/components/posts/PostCard";
+import type { Route } from "./+types/home";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "test" },
+    { name: "description", content: "Welcome to React Router!" },
+  ];
+}
 
 // Серверный компонент
 export default async function PostsPage() {
